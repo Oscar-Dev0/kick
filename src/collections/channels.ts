@@ -35,7 +35,7 @@ export class Channels extends Collection<Channel> {
 
             this.add(data);
             return data;
-        } catch (error) {
+        } catch (error: any) {
             throw new Error(`Error fetching channel: ${error.message}`);
         }
     }

@@ -61,7 +61,7 @@ export class Client extends EventEmitter {
         this.ws.on("messageCreate", (d: any) => {
             // También podemos considerar cachear al usuario
             console.log(d);
-            this.emit("messageCreate", this.chatrooms.get(d.message.chatroom_id).messages.add(d.message));
+            this.emit("messageCreate", this.chatrooms.get(d.message.chatroom_id)?.messages.add(d.message));
         });
     }
 

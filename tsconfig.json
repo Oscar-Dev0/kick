@@ -1,21 +1,40 @@
 {
     "compilerOptions": {
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "preserveConstEnums": true,
-        "declaration": false,
-        "outDir": "app",
-        "rootDir": "src",
-        "resolveJsonModule": true
-
+  
+      /* Configuración del Compilador */
+      "module": "CommonJS",                    // Establece el sistema de módulos a CommonJS
+      "target": "ES2020",                      // Compila a JavaScript compatible con ES2020
+      "strict": true,                          // Habilita comprobaciones estrictas en el código
+      "lib": [
+        "ESNext",
+        "WebWorker"
+      ],                                      // Proporciona bibliotecas fundamentales para el desarrollo
+      "moduleResolution": "node",              // Usa el sistema de resolución de módulos de Node.js
+      "esModuleInterop": true,                 // Permite la interoperabilidad entre los sistemas de módulos ES6 y CommonJS
+      "preserveConstEnums": true,              // Conserva las enumeraciones constantes durante la compilación
+      "removeComments": false,                 // Conserva los comentarios en el código compilado
+      "declaration": false,                   // No genera archivos de declaración (.d.ts)
+      "outDir": "app",                         // Directorio de salida para los archivos compilados
+      "rootDir": "src",                        // Directorio raíz para la búsqueda de archivos fuente
+  
+      /* Opciones de Tipado */                 // Evita que se infiera el tipo "any" implícitamente
+      "strictNullChecks": true,                // Comprueba los valores en busca de posibles "null" y "undefined"
+      "resolveJsonModule": true,               // Permite importar archivos JSON como módulos
+      "noFallthroughCasesInSwitch": true,      // Advierte sobre casos no controlados en sentencias "switch"
+      "skipLibCheck": true,                    // Evita la comprobación de las declaraciones de las bibliotecas
+      "strictFunctionTypes": true,             // Comprueba los tipos de funciones de manera estricta
+      "noImplicitThis": true,                  // Advierte cuando "this" se usa implícitamente como "any"
+      "noImplicitReturns": true,               // Advierte si una función no tiene una declaración "return"
+      "strictPropertyInitialization": false    // No exige la inicialización estricta de propiedades de clase
     },
     "exclude": [
-        "node_modules",
-        "app/**",
-        "package.json",
-        "typescript/**"
+      "node_modules",
+      "app/**",
+      "package.json",
+      "typescript/**"
     ],
     "include": [
-        "src/**/*.ts"
-    ],
-}
+      "src/**/*.ts"
+    ]
+  }
+  

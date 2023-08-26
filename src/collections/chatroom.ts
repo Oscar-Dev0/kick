@@ -35,7 +35,7 @@ export class Chatrooms extends Collection<Chatroom> {
 
             this.add(data);
             return data;
-        } catch (error) {
+        } catch (error: any) {
             throw new Error(`Error fetching chatroom: ${error.message}`);
         }
     };

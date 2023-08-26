@@ -42,7 +42,8 @@ export class WebSocketGateway extends EventEmitter {
     private authToken: string;
     private websocketURI: string;
     private logger: Logger<any>;
-    private heartbeatInterval?: NodeJS.Timeout; /** Timer para el envío periódico de latidos */
+    /** Timer para el envío periódico de latidos */
+    private heartbeatInterval?: NodeJS.Timeout; 
 
     /**
      * Constructor de la clase WebSocketGateway
@@ -161,5 +162,5 @@ export class WebSocketGateway extends EventEmitter {
         this.initializeWebSocket();
     };
 
-    public send(data : string){this.websocket.send(data)};
+    public send(data : string){this.websocket?.send(data)};
 }

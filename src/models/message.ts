@@ -34,7 +34,9 @@ export class Message {
         this.message = message.message;
         this.chatroom_id = message.chatroom_id;
         this.user = message.user;
-        this.chatroom = client.chatrooms.get(this.chatroom_id);
+        const cht = client.chatrooms.get(this.chatroom_id);
+        if(cht) this.chatroom = cht;
+        else this.chatroom = {} as any;
         this.client = client;
     }
 
