@@ -1,0 +1,40 @@
+{
+  "name": "hennus-kick",
+  "version": "0.0.1",
+  "description": "Un contenedor Realtime Websocket + API para kick.com",
+  "main": "app/index.js",
+  "scripts": {
+    "build#Npm": "npm run build#clean && npm publish",
+    "build#test": "npm run build#clean-old && tsc --declaration",
+    "test": "node Tests",
+    "build#clean-old": "rimraf -rf app && npm run build#clean-old-type",
+    "build#clean-old-type": "rimraf -rf typescript",
+    "build#clean": "npm run build#clean-old && tsup && tsc && npm run clean#build",
+    "clean#build": "rimraf typescript/index.js"
+  },
+  "author": "Hennu's-Dev",
+  "contributors": [
+    {
+      "name": "Oscar-Dev",
+      "url": "https://github.com/OscarDev-JS",
+      "author": true
+    }
+  ],
+  "keywords": [
+    "kick.com",
+    "hennu's"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/collection": "^1.5.3",
+    "@types/ws": "^8.5.5",
+    "axios": "^1.4.0",
+    "tslog": "^4.9.2",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}

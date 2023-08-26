@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "declaration": false,
+        "outDir": "app",
+        "rootDir": "src",
+        "resolveJsonModule": true
+
+    },
+    "exclude": [
+        "node_modules",
+        "app/**",
+        "package.json",
+        "typescript/**"
+    ],
+    "include": [
+        "src/**/*.ts"
+    ],
+}

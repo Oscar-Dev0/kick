@@ -1,0 +1,48 @@
+export interface ITF_StreamerChannel {
+    id: number;
+    user_id: number;
+    slug: string;
+    is_banned: boolean;
+    playback_url: string | null;
+    name_updated_at: string | null;
+    vod_enabled: boolean;
+    subscription_enabled: boolean;
+    can_host: boolean;
+    verified: boolean | null;
+};
+
+export interface ITF_User {
+    id: number;
+    email: string;
+    username: string;
+    google_id: string | null;
+    agreed_to_terms: boolean;
+    email_verified_at: string;
+    bio: string | null;
+    country: string | null;
+    state: string | null;
+    city: string | null;
+    enable_live_notifications: boolean;
+    instagram: string | null;
+    twitter: string | null;
+    youtube: string | null;
+    discord: string | null;
+    tiktok: string | null;
+    facebook: string | null;
+    enable_onscreen_live_notifications: boolean;
+    apple_id: string | null;
+    phone: string | null;
+    email_updated_at: string | null;
+    newsletter_subscribed: boolean;
+    enable_sms_promo: boolean;
+    enable_sms_security: boolean;
+    profilepic: string | null;
+    filtered_categories: string[];
+    is_2fa_setup: boolean;
+    redirect: string | null;
+    channel_can_be_updated: boolean;
+    is_live: boolean;
+    intercom_hash: string | null;
+    roles: string[];
+    streamer_channel: ITF_StreamerChannel;
+};

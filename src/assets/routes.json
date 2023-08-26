@@ -1,0 +1,288 @@
+{
+    "user": {
+        "uri": "api/v1/user",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "resource_urls": {
+        "uri": "api/v1/resource-urls",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "channel.chat": {
+        "uri": "api/v1/channels/{channel}/chat",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "chat.messages": {
+        "uri": "api/v1/chat-messages",
+        "methods": [
+            "POST",
+            "HEAD"
+        ]
+    },
+    "message.react": {
+        "uri": "api/v1/message-react",
+        "methods": [
+            "POST",
+            "HEAD"
+        ]
+    },
+    "channels.followed": {
+        "uri": "api/v1/channels/followed",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "channel.followers": {
+        "uri": "api/v1/channels/{channel}/followers",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "channel": "slug"
+        }
+    },
+    "channel.getFollowersForBadge": {
+        "uri": "api/v1/channels/{channel}/get-followers-for-badge/{badge}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "channel": "slug"
+        }
+    },
+    "liveChannels.search": {
+        "uri": "api/v1/live-channels/{channel}/search",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "channel": "slug"
+        }
+    },
+    "subscriptions.index": {
+        "uri": "api/v1/subscriptions",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.subscribers": {
+        "uri": "api/v1/subscriptions/subscribers",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.history": {
+        "uri": "api/v1/subscriptions/history",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.connect_account": {
+        "uri": "api/v1/subscriptions/connect-account",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.plan": {
+        "uri": "api/v1/subscriptions/plan",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.get_default_payment_method": {
+        "uri": "api/v1/subscriptions/default-payment-method",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.get_payment_methods": {
+        "uri": "api/v1/subscriptions/payment-methods",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.stripe_countries": {
+        "uri": "api/v1/subscriptions/stripe-countries",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.create_setup_intent": {
+        "uri": "api/v1/subscriptions/setup-intent",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.resetable": {
+        "uri": "api/v1/subscriptions/reset",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subscriptions.get_payments_history": {
+        "uri": "api/v1/subscriptions/payments-history",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "channel.getLivestream": {
+        "uri": "api/v1/channels/{channel}/livestream",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "channel": "slug"
+        }
+    },
+    "liveStream.heartBeat": {
+        "uri": "api/v1/live-streams/{liveStream}/heart-beat",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "liveStream": "slug"
+        }
+    },
+    "channel.followingSortBy": {
+        "uri": "api/v1/channels/following/{id}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "chatroom.show": {
+        "uri": "api/v1/{channel}/chatroom",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "channels.show": {
+        "uri": "api/v1/channels/{channel}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "channels.links": {
+        "uri": "api/v1/channels/{channel}/links",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "user.show": {
+        "uri": "api/v1/users/{username}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "categories.get": {
+        "uri": "api/v1/categories",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "categories.top": {
+        "uri": "api/v1/categories/top",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "user.categories.top": {
+        "uri": "api/v1/user/categories/top",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "categories.show": {
+        "uri": "api/v1/categories/{category}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "category": "slug"
+        }
+    },
+    "user.livestreams": {
+        "uri": "api/v1/user/livestreams",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subcategories.get": {
+        "uri": "api/v1/subcategories",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subcategories.all": {
+        "uri": "api/v1/listsubcategories",
+        "methods": [
+            "GET",
+            "HEAD"
+        ]
+    },
+    "subcategories.show": {
+        "uri": "api/v1/subcategories/{subcategory}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "subcategory": "slug"
+        }
+    },
+    "video.show": {
+        "uri": "api/v1/video/{video}",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "video": "uuid"
+        }
+    },
+    "banned-users": {
+        "uri": "api/v1/channels/{channel}/banned-users",
+        "methods": [
+            "GET",
+            "HEAD"
+        ],
+        "bindings": {
+            "channel": "slug"
+        }
+    }
+}
